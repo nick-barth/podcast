@@ -28,14 +28,20 @@
 	<meta name="twitter:image:src"   content="">
 
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/episode.css">
+	<link rel="stylesheet" href="css/normalize.css">
 
 </head>
 <body>
 
-	{{#each episodes}}
-	    {{> episode }}
-	{{/each}}
+	<div class="header">
+		<img class="header__logo" src="logo.svg">
+	</div>
 
+	<div class="episodes">
+		{{#each episodes}}
+	    	{{> episode }}
+		{{/each}}
+	</div>
+	
 </body>
 </html>
