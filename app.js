@@ -1,6 +1,7 @@
 var express = require('express');
 var exphbs  = require('express-handlebars');
 var path = require('path');
+var dateFormat = require('dateformat');
 
 var app = express();
 
@@ -19,7 +20,10 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
 );
 
 const episodes = [{
+  "episode_number": 1,
   "id": 13158665,
+  "title": "Being an Idiot",
+  "guest": "Nick Barth",
   "created_at": "2011/04/06 15:37:43 +0000",
   "user_id": "2",
   "duration": 18109,
@@ -38,7 +42,6 @@ const episodes = [{
   "isrc": null,
   "video_url": null,
   "track_type": "recording",
-  "title": "1: Competative Cooking",
   "original_format": "m4a",
   "original_content_size": 10211857,
   "license": "all-rights-reserved",
@@ -55,7 +58,10 @@ const episodes = [{
 },
 {
   "id": 1,
+  "episode_number": 2,
   "created_at": "2011/04/06 15:37:43 +0000",
+  "title": "Violin Rap",
+  "guest": "Lil' Sharp",
   "user_id": "1",
   "duration": 18109,
   "commentable": true,
@@ -73,7 +79,6 @@ const episodes = [{
   "isrc": null,
   "video_url": null,
   "track_type": "recording",
-  "title": "1: Competative Cooking",
   "original_format": "m4a",
   "original_content_size": 10211857,
   "license": "all-rights-reserved",
@@ -106,6 +111,7 @@ app.get('/', function (req, res) {
 });
 
 episodes.forEach(function(pageObj){
+	pageObj.created_at = dateFormat(pageObj.created_at, 'shortDate');
 	app.get('/episode/' + pageObj.user_id, function (req, res) {
 	    res.render('layouts/episode', {
 			episode: pageObj

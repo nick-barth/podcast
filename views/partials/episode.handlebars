@@ -1,8 +1,26 @@
 <div class="episode">
-	<img class="episode__src" src="episodes/nick-barth.jpg"></img>
-	<div class="episode__content">
-		<div class="episode__sc-container">
-			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/215912382&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_artwork=false"></iframe>
+	<div class="episode__src-container">
+		<img class="episode__src" src="episodes/nick-barth.jpg">
+		<div class="episode__number">
+			#{{ episode_number }}
+		</div>
+	</div>
+    <div class="episode__content-container">
+		<div class="episode__title">
+			<span class="episode__random-color">
+				{{ title }}
+			</span>
+		</div>
+		<div class="episode__guest">
+			w/ <span class="episode__random-color">
+				{{ guest }}
+			</span>
+		</div>
+		<div class="episode__date">
+			{{ created_at }}
+		</div>
+		<div class="episode__src">
+			<iframe width="100%" height="20" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310668381&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true"></iframe>
 		</div>
 	</div>
 </div>
