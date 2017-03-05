@@ -114,6 +114,11 @@ EPISODES
 	padding: 2rem;
 }
 
+.episode:nth-child(odd) .episode__content-container{
+	float:left;
+	text-align:right;
+}
+
 .episode__random-color {
 	padding-left: .4rem;
 	padding-right: .4rem;

@@ -95,7 +95,6 @@ const episodes = [{
 }]
 
 var hbs = exphbs.create({
-    defaultLayout: 'main',
     partialsDir: 'views/partials/'
 });
 
@@ -108,6 +107,10 @@ app.get('/', function (req, res) {
 	res.render('layouts/main', {
 		episodes: episodes,
 	});
+});
+
+app.get('/about', function (req, res) {
+	res.render('layouts/about');
 });
 
 episodes.forEach(function(pageObj){
