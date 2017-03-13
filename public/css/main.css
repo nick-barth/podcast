@@ -21,9 +21,16 @@
 }
 
 body {
-  font-family: 'Avenir';
-  color: black;
-  margin:0;
+	font-family: 'Avenir';
+	color: black;
+	margin:0;
+
+	background-size: 6px 6px !important;
+	background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjEuMCIgeTE9IjEuMCIgeDI9IjAuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSI0NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNlMDMyMTgiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2UwMzIxOCIvPjxzdG9wIG9mZnNldD0iNTUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+	background-size: 100%;
+	background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0) 46%, #e03218 49%, #e03218 51%, rgba(0, 0, 0, 0) 55%);
+	background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0) 46%, #e03218 49%, #e03218 51%, rgba(0, 0, 0, 0) 55%);
+	background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0) 46%, #e03218 49%, #e03218 51%, rgba(0, 0, 0, 0) 55%);
 }
 
 /*****
@@ -38,7 +45,7 @@ HEADER
 
 .header__logo {
 	background:#fff;
-	max-width:50rem;
+	max-width:38rem;
 	margin-top: 5rem;
 }
 
@@ -87,15 +94,16 @@ EPISODES
 ********/
 
 .episodes {
-	max-width:50rem;
+	max-width:38rem;
 	margin: auto;
 	margin-top: 7rem;
 }
 
 .episode {
-	max-width:50rem;
-	margin-bottom: 10rem;
+	max-width:38rem;
+	margin-bottom: 6rem;
 	font-size:0;
+	background-color:white;
 }
 
 .episode__src {
@@ -140,7 +148,7 @@ EPISODES
 .episode__date {
 	font-size: 1.2rem;
 	font-weight:300;
-	margin-bottom: 5rem;
+	margin-bottom: 3rem;
 }
 
 .episode__src-container {
