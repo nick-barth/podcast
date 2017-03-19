@@ -57,9 +57,10 @@ HEADER
 }
 
 .header__schpeil {
-	display:flex;
+	display:block;
 	max-width:68rem;
 	margin:auto;
+	text-align:center;
 }
 
 .header__schpeil-subscribe-header:after {
@@ -90,13 +91,11 @@ HEADER
 
 .header__schpeil-info {
 	padding:2rem;
-	width:66%;
 	font-size: 1.3rem;
 	font-weight:300;
 }
 
 .header__schpeil-subscribe {
-	width:33%;
 	padding:2rem;
 	font-weight:200;
 }
@@ -111,7 +110,6 @@ EPISODES
 }
 
 .episode {
-	max-width:32%;
 	margin-bottom: 3rem;
 	font-size:0;
 	position:relative;
@@ -135,6 +133,10 @@ EPISODES
 .episode__title {
 	font-size:2.5rem;
 	font-weight: 500;
+}
+
+.episode__guest {
+	padding-bottom:1rem;
 }
 
 .episode__guest-name {
@@ -185,6 +187,18 @@ EPISODES
     display: flex;
     flex: 0 1 calc(50% - 0.5em);
     /* width: calc(50% - 1em); */
+  }
+
+  .header__schpeil {
+	  display:flex;
+	  text-align:left;
+  }
+
+  .header__schpeil-info {
+	  width:66%;
+  }
+  .header__schpeil-subscribe {
+	  width:33%;
   }
 } /* mq 40em*/
 
