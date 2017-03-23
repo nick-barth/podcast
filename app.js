@@ -135,7 +135,9 @@ var hbs = exphbs.create({
     partialsDir: 'views/partials/'
 });
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -144,10 +146,6 @@ app.get('/', function (req, res) {
 	res.render('layouts/main', {
 		episodes: episodes,
 	});
-});
-
-app.get('/about', function (req, res) {
-	res.render('layouts/about');
 });
 
 episodes.forEach(function(pageObj){
