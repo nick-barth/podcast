@@ -1,0 +1,27 @@
+<div class="episode">
+	<a href="/episode/{{ episode_number }}" class="episode__container">
+		<div class="episode__img-container">
+			<div class="episode__src">
+				<div class="episode__number">
+					#{{ episode_number }}
+				</div>
+				<img class="episode__img" src="episodes/nick-barth.jpg">
+			</div>
+		</div>
+	    <div class="episode__content-container">
+	        <div class="episode__date">
+				{{ created_at }}
+			</div>
+			<div class="episode__title">
+					{{ title }}
+				</span>
+			</div>
+			<div class="episode__guest">
+				w/
+	            <span class="episode__guest-name">
+	                {{ guest }}
+	            </span>
+			</div>
+		</div>
+	</a>
+</div>

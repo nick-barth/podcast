@@ -111,67 +111,90 @@ EPISODES
 
 .episode {
 	margin-bottom: 3rem;
-	font-size:0;
 	position:relative;
 }
 
-.episode__src {
-	max-width:40%;
-	display:inline-block;
+.episode__container {
+	width:90%;
+	margin:auto;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
+.episode__container:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.episode__img-container {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	font-size:0;
+	overflow:hidden;
+}
+
+.episode__img-container:hover .episode__img {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.episode__src {
+	position:relative;
+}
+
+.episode__src::after {
+	content:'';
+	padding-top:75%;
+	display:block;
+}
+
+.episode__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
 
 .episode__content-container {
-	font-size: 1.5rem;
-	height: 100%;
-	box-sizing: border-box;
-	padding: 2rem;
-	font-weight:200;
+	font-weight: 200;
+	color: #00C8D3;
+	background-color: #003333;
+	margin: auto;
 	text-align:center;
 }
 
+.episode__date {
+	font-size: 0.8rem;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+}
+
 .episode__title {
-	font-size:2.5rem;
 	font-weight: 500;
+	font-size: 1.7rem;
+	padding-bottom: .5rem;
 }
 
 .episode__guest {
-	padding-bottom:1rem;
+	padding-bottom: .5rem;
 }
 
 .episode__guest-name {
-	font-size:2rem;
-	margin-bottom:.5rem;
-	font-weight:500;
-}
-
-.episode__date {
-	font-size: 1.2rem;
-	font-weight:300;
-	margin-bottom: 1rem;
-	padding:.5rem;
-	color: #00C8D3;
-	background-color: #003333;
-}
-
-.episode__src-container {
-	display: inline;
-	position: relative;
-	height: 100%;
-}
-
-.episode__src {
-	display:inline;
+	font-weight: 300;
+	font-size: 1.4rem;
 }
 
 .episode__number {
 	position: absolute;
-	font-size: 5rem;
-	right: 0.5rem;
-	top: -5rem;
-	color: #fff;
+	font-size: 3rem;
+	color: #00C8D3;
+	z-index: 10;
+	bottom: 0;
+	right: 1rem;
 }
-
 
 /* Flexbox styles */
 @media screen and (min-width: 40em) {

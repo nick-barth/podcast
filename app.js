@@ -57,7 +57,7 @@ const episodes = [{
   "attachments_uri": "http://api.soundcloud.com/tracks/13158665/attachments"
 },
 {
-  "episode_number": 1,
+  "episode_number": 2,
   "id": 13158665,
   "title": "'Scholarship'",
   "guest": "Joe DeMaria",
@@ -150,7 +150,7 @@ app.get('/', function (req, res) {
 
 episodes.forEach(function(pageObj){
 	pageObj.created_at = dateFormat(pageObj.created_at, 'shortDate');
-	app.get('/episode/' + pageObj.user_id, function (req, res) {
+	app.get('/episode/' + pageObj.episode_number, function (req, res) {
 	    res.render('layouts/episode', {
 			episode: pageObj
     	});
