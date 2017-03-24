@@ -114,6 +114,10 @@ EPISODES
 	position:relative;
 }
 
+.episode a {
+	text-decoration:none;
+}
+
 .episode__container {
 	width:90%;
 	margin:auto;
@@ -133,7 +137,7 @@ EPISODES
 	overflow:hidden;
 }
 
-.episode__img-container:hover .episode__img {
+.episode:hover .episode__img {
 	-moz-transform: scale(1.1);
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
