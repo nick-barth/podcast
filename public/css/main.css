@@ -112,6 +112,9 @@ EPISODES
 .episode {
 	margin-bottom: 3rem;
 	position:relative;
+	width: 80%;
+	margin: auto;
+	padding-bottom: 3rem;
 }
 
 .episode a {
@@ -119,14 +122,11 @@ EPISODES
 }
 
 .episode__container {
-	width:90%;
-	margin:auto;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	width: 100%;
+	margin: auto;
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.episode__container:hover {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	padding-left: .5rem;
+	padding-right: .5rem;
 }
 
 .episode__img-container {
@@ -172,23 +172,24 @@ EPISODES
 
 .episode__date {
 	font-size: 0.8rem;
-	padding-bottom: .5rem;
+	padding-bottom: .25rem;
 	padding-top: .5rem;
+	opacity:.7;
 }
 
 .episode__title {
 	font-weight: 500;
 	font-size: 1.7rem;
-	padding-bottom: .5rem;
+	padding-bottom: .25rem;
 }
 
 .episode__guest {
-	padding-bottom: .5rem;
+	padding-bottom: .25rem;
 }
 
 .episode__guest-name {
 	font-weight: 300;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 .episode__number {
@@ -198,6 +199,11 @@ EPISODES
 	z-index: 10;
 	bottom: 0;
 	right: 1rem;
+}
+
+.player {
+	max-width: 68rem;
+	padding: 2rem;
 }
 
 /* Flexbox styles */

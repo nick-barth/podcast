@@ -1,26 +1,20 @@
-<div class="episode">
-	<!-- <div class="episode__src-container">
-		<img class="episode__src" src="episodes/nick-barth.jpg">
-		<div class="episode__number">
-			#{{ episode_number }}
+<div class="player">
+    <div class="player__content-container">
+        <div class="player__date">
+			{{ episode.date }}
 		</div>
-	</div> -->
-    <div class="episode__content-container">
-        <div class="episode__date">
-			{{ created_at }}
-		</div>
-		<div class="episode__title">
-				{{ title }}
+		<div class="player__title">
+				{{ episode.title }}
 			</span>
 		</div>
-		<div class="episode__guest">
+		<div class="player__guest">
 			w/
-            <span class="episode__guest-name">
-                {{ guest }}
+            <span class="player__guest-name">
+                {{ episode.guest }}
             </span>
 		</div>
-		<div class="episode__src">
-			<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310829780&amp;auto_play=false&amp;hide_related=true&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+		<div class="player__src">
+			<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/310829780&amp;color=003333&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 		</div>
 	</div>
 </div>
