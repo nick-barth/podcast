@@ -20,7 +20,7 @@ var job = new CronJob('00 30 11 * * 1-5', function() {
 );
 
 const episodes = [{
-  "episode_number": 1,
+  "number": 1,
   "title": "Being an Idiot",
   "guest": "Nick Barth",
   "img": "nickbarth",
@@ -28,7 +28,7 @@ const episodes = [{
   "soundcloud": "310829780"
 },
 {
-  "episode_number": 2,
+  "number": 2,
   "id": 13158665,
   "title": "'Scholarship'",
   "guest": "Joe DeMaria",
@@ -37,7 +37,7 @@ const episodes = [{
   "soundcloud": "310829780"
 },
 {
-  "episode_number": 3,
+  "number": 3,
   "id": 13158665,
   "title": "Sassy Molassy",
   "guest": "Jack Eichel",
@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
 
 episodes.forEach(function(pageObj){
 	pageObj.created_at = dateFormat(pageObj.created_at, 'shortDate');
-	app.get('/episode/' + pageObj.episode_number, function (req, res) {
+	app.get('/episode/' + pageObj.number, function (req, res) {
 	    res.render('layouts/episode', {
 			episode: pageObj
     	});

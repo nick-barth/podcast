@@ -201,9 +201,48 @@ EPISODES
 	right: 1rem;
 }
 
+/*****
+PLAYER
+******/
+
 .player {
 	max-width: 68rem;
 	padding: 2rem;
+	margin:auto;
+}
+
+.player__src {
+	margin:auto;
+	margin-top: -12rem;
+}
+
+.player__number {
+	font-size:5rem;
+	display:inline-block;
+	margin-left:3rem;
+}
+
+.player__details {
+	color: #00C8D3;
+	background-color: #003333;
+	display: inline-block;
+	padding: 3rem;
+	margin-left:7rem;
+	height: 15rem;
+}
+
+.player__date {
+	font-size:1.2rem;
+	opacity:.7;
+	font-weight:300;
+}
+
+.player__title {
+	font-size:1.5rem;
+}
+
+.player__name {
+	padding-bottom:2rem;
 }
 
 /* Flexbox styles */
