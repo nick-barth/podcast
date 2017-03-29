@@ -23,7 +23,7 @@ const episodes = [{
   "number": 1,
   "title": "Being an Idiot",
   "guest": "Nick Barth",
-  "img": "nick_barth",
+  "img": "nick-barth",
   "date": "2-16-17",
   "soundcloud": "310829780"
 }]
