@@ -23,25 +23,7 @@ const episodes = [{
   "number": 1,
   "title": "Being an Idiot",
   "guest": "Nick Barth",
-  "img": "nickbarth",
-  "date": "2-16-17",
-  "soundcloud": "310829780"
-},
-{
-  "number": 2,
-  "id": 13158665,
-  "title": "'Scholarship'",
-  "guest": "Joe DeMaria",
-  "img": "joedemaria",
-  "date": "2-16-17",
-  "soundcloud": "310829780"
-},
-{
-  "number": 3,
-  "id": 13158665,
-  "title": "Sassy Molassy",
-  "guest": "Jack Eichel",
-  "img": "jackeichel",
+  "img": "nick_barth",
   "date": "2-16-17",
   "soundcloud": "310829780"
 }]
