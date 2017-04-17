@@ -2,39 +2,16 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var path = require('path');
 var dateFormat = require('dateformat');
+var episodes = require('./episodes.json');
+
 
 var app = express();
-
-var CronJob = require('cron').CronJob;
-var job = new CronJob('00 30 11 * * 1-5', function() {
-  /*
-   * Runs every weekday (Monday through Friday)
-   * at 11:30:00 AM. It does not run on Saturday
-   * or Sunday.
-   */
-  }, function () {
-    /* This function is executed when the job stops */
-  },
-  true, /* Start the job right now */
-  'America/Los_Angeles' /* Time zone of this job. */
-);
-
-const episodes = [{
-  "number": 1,
-  "title": "Being an Idiot",
-  "guest": "Nick Barth",
-  "img": "nick-barth",
-  "date": "2-16-17",
-  "soundcloud": "310829780"
-}]
 
 var hbs = exphbs.create({
     partialsDir: 'views/partials/'
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
-
-
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

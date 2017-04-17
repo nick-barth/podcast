@@ -149,7 +149,7 @@ EPISODES
 
 .episode__src::after {
 	content:'';
-	padding-top:75%;
+	padding-top:72%;
 	display:block;
 }
 
