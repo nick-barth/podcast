@@ -149,7 +149,7 @@ EPISODES
 
 .episode__src::after {
 	content:'';
-	padding-top:72%;
+	padding-top:100%;
 	display:block;
 }
 
@@ -213,7 +213,7 @@ PLAYER
 
 .player__src {
 	margin:auto;
-	margin-top: -12rem;
+	margin-top: -8rem;
 }
 
 .player__number {
@@ -227,8 +227,7 @@ PLAYER
 	background-color: #003333;
 	display: inline-block;
 	padding: 3rem;
-	margin-left:7rem;
-	height: 15rem;
+	height: 12rem;
 }
 
 .player__date {
@@ -243,6 +242,11 @@ PLAYER
 
 .player__name {
 	padding-bottom:2rem;
+}
+
+
+@media screen and (min-width: 20em) {
+	
 }
 
 /* Flexbox styles */
@@ -272,6 +276,18 @@ PLAYER
   .header__schpeil-subscribe {
 	  width:33%;
   }
+
+  .player__details {
+	  margin-left:7rem;
+	  height: 15rem;
+  }
+
+  .player__src {
+  	margin:auto;
+  	margin-top: -12rem;
+  }
+
+
 } /* mq 40em*/
 
 @media screen and (min-width: 60em) {
