@@ -24,7 +24,7 @@ app.get('/', function (req, res) {
 
 episodes.forEach(function(pageObj){
 	pageObj.created_at = dateFormat(pageObj.created_at, 'shortDate');
-	app.get('/episode/' + pageObj.number, function (req, res) {
+	app.get('/episode/' + pageObj.number + '/' + pageObj.url, function (req, res) {
 	    res.render('layouts/episode', {
 			episode: pageObj
     	});
