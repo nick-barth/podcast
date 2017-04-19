@@ -1,28 +1,25 @@
 <div class="episode">
 	<!-- <a href="/episode/{{ number }}/{{ url }}" class="episode__container"> -->
-		<div class="episode__img-container">
-			<div class="episode__src">
-				<img class="episode__img" src="/episodes/{{img}}.jpg">
-			</div>
+	<div class="episode__img-container">
+		<img class="episode__img" src="/episodes/{{img}}.jpg">
+		<div class="episode__number">
+			#{{number}}
 		</div>
-
-
-
-
-	    <!-- <div class="episode__content-container">
-	        <div class="episode__date">
-				{{ created_at }}
+	</div>
+    <div class="episode__content-container">
+		<div class="episode__guest">
+			<span class="episode__guest-text"> {{ guest }} </span>
+		</div>
+		<div class="episode__quote">
+			"{{ quote }}"
+		</div>
+		<div class="episode__description">
+			{{ description }}
+		</div>
+		<a href="/episode/{{ number }}/{{ url }}" class="episode__link">
+			<div class="episode__button">
+				Listen
 			</div>
-			<div class="episode__title">
-					{{ title }}
-				</span>
-			</div>
-			<div class="episode__guest">
-				w/
-	            <span class="episode__guest-name">
-	                {{ guest }}
-	            </span>
-			</div>
-		</div> -->
-	</a>
+		</a>
+	</div>
 </div>

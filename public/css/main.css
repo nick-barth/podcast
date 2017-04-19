@@ -112,14 +112,105 @@ EPISODES
 }
 
 .episode {
+	position:relative;
+	margin: 5rem;
+	display:flex;
 }
 
-.episode a {
-	text-decoration:none;
+.episode:nth-child(1) {
+	flex-direction: row-reverse;
+}
+
+.episode__img-container{
+	width:50%;
+	position:relative;
+	border: 4px solid #fff;
+}
+
+.episode__img-container:before {
+	display: block;
+	content: "";
+	padding-top: 124%;
+}
+
+.episode__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.episode__number {
+	position: absolute;
+	bottom: -3rem;
+	right: 1rem;
+	font-size: 12rem;
+	color:#fff;
 }
 
 .episode__container {
 	width: 100%;
+}
+
+.episode__content-container {
+	width:50%;
+	text-align:center;
+	position:relative;
+	margin:2rem;
+}
+
+.episode__guest {
+	font-size:1.9rem;
+}
+
+.episode__guest-text {
+	background: #00C8D3;
+	font-weight: inherit;
+	padding: 0 .5em;
+	position: relative;
+	z-index: 10;
+	font-weight: 500;
+}
+
+.episode__guest::before {
+	content: '';
+	background: #003333;
+	height: 1px;
+	position: absolute;
+	top: .45em;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.episode__quote {
+	font-size:2.5rem;
+	color:#fff;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.episode__description {
+	font-size:1.5rem;
+	margin-bottom: 3rem;
+}
+
+.episode__link {
+	text-decoration: none;
+}
+
+.episode__button {
+	text-decoration:none;
+	font-size:2.2rem;
+	padding:1rem;
+	border:2px solid #003333;
+	transition: all 0.3s ease;
+}
+
+.episode__button:hover {
+	color:#00C8D3;
+	background-color: #003333;
 }
 
 /*****
@@ -172,20 +263,6 @@ PLAYER
 
 /* Flexbox styles */
 @media screen and (min-width: 40em) {
-  .episodes {
-    margin-top: -1em;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .episode {
-    margin-bottom: 1em;
-    display: flex;
-    flex: 0 1 calc(50% - 0.5em);
-    /* width: calc(50% - 1em); */
-  }
-
   .header__schpeil {
 	  display:flex;
 	  text-align:left;
@@ -212,14 +289,4 @@ PLAYER
 } /* mq 40em*/
 
 @media screen and (min-width: 60em) {
-  .episodes {
-    margin-top: inherit;
-  }
-
-  .episode {
-    margin-bottom: 2em;
-    display: flex;
-    flex: 0 1 calc(33% - 0.5em);
-    /* width: calc(33% - 1em); */
-  }
 } /* mq 60em*/
