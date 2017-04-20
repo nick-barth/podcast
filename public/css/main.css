@@ -299,7 +299,7 @@ PLAYER
 	.header__schpeil-info {
 		display:block;
 	}
-	
+
 	.episode {
 		position:relative;
 		margin: 5rem;
@@ -308,6 +308,7 @@ PLAYER
 
 	.episode__content-container {
 		margin: 2rem;
+		width:80%;
 	}
 
 	.episode__img-container {
