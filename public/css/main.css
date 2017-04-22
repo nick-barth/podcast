@@ -127,6 +127,7 @@ EPISODES
 	position:relative;
 	border: 1.5rem solid #fff;
 	margin-bottom:2rem;
+	box-sizing:border-box;
 }
 
 .episode__img-container:before {
@@ -144,12 +145,11 @@ EPISODES
 }
 
 .episode__number {
-	display:none;
 	position: absolute;
-	bottom: -3rem;
+	bottom: -1rem;
 	right: 1rem;
-	font-size:12rem;
-	color:#fff;
+	font-size: 6rem;
+	color: #fff;
 }
 
 .episode__container {
@@ -317,7 +317,11 @@ PLAYER
 	}
 
 	.episode__number {
-		display:block;
+		position: absolute;
+		bottom: -3rem;
+		right: 1rem;
+		font-size:12rem;
+		color:#fff;
 	}
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
