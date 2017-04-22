@@ -104,6 +104,80 @@ HEADER
 }
 
 /*******
+PLAYER
+********/
+
+.player {
+	position:relative;
+	margin: 2rem;
+	display:block;
+	margin:auto;
+	max-width:68rem;
+	padding-top:2rem;
+	padding:3rem;
+}
+
+.player:nth-child(1) {
+	flex-direction: row-reverse;
+}
+
+.player__number {
+	position: absolute;
+	bottom: -1rem;
+	right: 1rem;
+	font-size: 6rem;
+	color: #fff;
+}
+
+.player__container {
+	width: 100%;
+}
+
+.player__content-container {
+	text-align:center;
+	position:relative;
+
+}
+
+.player__guest {
+	font-size:1.9rem;
+}
+
+.player__guest-text {
+	background: #00C8D3;
+	font-weight: inherit;
+	padding: 0 .5em;
+	position: relative;
+	z-index: 10;
+	font-weight: 200;
+}
+
+.player__guest::before {
+	content: '';
+	background: #003333;
+	height: 1px;
+	position: absolute;
+	top: .45em;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+
+.player__quote {
+	font-size:2.5rem;
+	color:#fff;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+
+.player__description {
+	font-size:1.5rem;
+	margin-bottom: 3rem;
+	font-weight:200;
+}
+
+
+/*******
 EPISODES
 ********/
 
@@ -216,47 +290,6 @@ EPISODES
 	background-color: #003333;
 }
 
-/*****
-PLAYER
-******/
-
-.player {
-	max-width: 68rem;
-	padding: 2rem;
-	margin:auto;
-}
-
-.player__src {
-	margin:auto;
-}
-
-.player__number {
-	font-size:5rem;
-	display:inline-block;
-	margin-left:3rem;
-}
-
-.player__details {
-	color: #00C8D3;
-	background-color: #003333;
-	display: inline-block;
-	padding: 3rem;
-	height: 12rem;
-}
-
-.player__date {
-	font-size:1.2rem;
-	opacity:.7;
-	font-weight:300;
-}
-
-.player__title {
-	font-size:1.5rem;
-}
-
-.player__name {
-	padding-bottom:2rem;
-}
 
 
 @media screen and (min-width: 20em) {
@@ -320,6 +353,11 @@ PLAYER
 		right: 1rem;
 		font-size:12rem;
 		color:#fff;
+	}
+
+	.player {
+		padding:0;
+		padding-top:3rem;
 	}
 }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
