@@ -192,7 +192,7 @@ EPISODES
 	display:block;
 }
 
-.episode:nth-child(1) {
+.episode:nth-child(odd) {
 	flex-direction: row-reverse;
 }
 
