@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8"/>
 
-    <title>Dumbest in the Room | {{ episode.title }} </title>
+    <title> {{ episode.title }} </title>
     <meta name="description" content="A podcast for a bit of everything" />
 
     <meta name="author" content="Nick Barth" />
@@ -17,8 +17,8 @@
     <meta name='author' content='Nick Barth, barth.nicholas@gmail.com'>
     <meta name='reply-to' content='dumbestintheroom@gmail.com'>
     <meta name='owner' content=''>
-    <meta name='url' content='http://www.dumbestintheroom.com/'>
-    <meta name='identifier-URL' content='http://www.dumbestintheroom.com/'>
+    <meta name='url' content='http://www.dumbestintheroom.com/episode/{{episode.number}}/{{episode.url}}'>
+    <meta name='identifier-URL' content='http://www.dumbestintheroom.com/episode/{{episode.number}}/{{episode.url}}'>
     <meta name='coverage' content='Worldwide'>
     <meta name='distribution' content='Global'>
     <meta name='subtitle' content='Bored and Millenial'>
@@ -29,10 +29,10 @@
     <meta name="theme-color" content="#ffffff" />
 
     <meta property="og:type"          content="website" />
-	<meta property="og:title"         content="Dumbest in the Room" />
-    <meta property="og:url"           content="http://www.dumbestintheroom.com/" />
-	<meta property="og:description"   content="A podcast for breadth first learning" />
-	<meta property="og:image"         content="http://www.dumbestintheroom.com/jumbo.png" />
+	<meta property="og:title"         content="{{episode.title}}" />
+    <meta property="og:url"           content="http://www.dumbestintheroom.com/episode/{{episode.number}}/{{episode.url}}" />
+	<meta property="og:description"   content="We are out here finna function, eh?" />
+	<meta property="og:image"         content="http://www.dumbestintheroom.com/episodes/{{img}}.jpg" />
 	<meta property="og:image:width"   content="600" />
 	<meta property="og:image:height"  content="315" />
 	<meta property="og:site_name"     content="Dumbest in the Room" />
@@ -41,7 +41,7 @@
 	<meta name="twitter:site"        content="@dumbestintheroom" />
 	<meta name="twitter:title"       content="dumbestintheroom">
 	<meta name="twitter:description" content="A podcast for breadth first learning">
-	<meta name="twitter:image:src"   content="">
+	<meta name="twitter:image:src"   content="http://www.dumbestintheroom.com/jumbo.png">
 
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="stylesheet" href="/css/normalize.css">
