@@ -13,6 +13,37 @@ var hbs = exphbs.create({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/sitemap.xml', function (req, res) {
+	const domain = 'www.dumbestintheroom.com';
+    const eps = episodes.map(e => {
+        return e.url;
+    });
+
+
+	let XML = '<?xml version="1.0" encoding="UTF-8"?>';
+
+	XML += `
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+            <url>
+                <loc>http://${domain}/</loc>
+                <priority>1.0</priority>
+            </url>
+
+        ${eps.map((ep) => {
+            return `
+            <url>
+                <loc>http://${domain}/episode/${ep}/</loc>
+                <priority>0.9</priority>
+            </url>
+            `;
+        })
+        }
+    </urlset>
+    `;
+    XML = XML.replace(/,/g , "");
+    res.header('Content-Type','text/xml').send(XML)
+});
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
@@ -21,6 +52,8 @@ app.get('/', function (req, res) {
 		episodes: episodes,
 	});
 });
+
+
 
 episodes.forEach(function(pageObj){
 	pageObj.created_at = dateFormat(pageObj.created_at, 'shortDate');
